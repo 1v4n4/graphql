@@ -4,14 +4,12 @@ import { buildSchema } from 'graphql';
 
 const typeDefs = gql`
   type Query {
-    hello: String
-    number1: Int
+    hello: [String!]!
   }`;
 
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
-    number1: () => 1
+    hello: () => ['Hello','world!']
   }
 };
 const server = new ApolloServer(
@@ -20,9 +18,6 @@ const server = new ApolloServer(
     resolvers,
   }
 );
-
-
-
 
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
