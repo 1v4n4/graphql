@@ -8,7 +8,7 @@ const products = [
     price: 42.44,
     image: "img-1",
     onSale: false,
-    categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    categoryId: "10",
   },
   {
     id: "2",
@@ -18,7 +18,7 @@ const products = [
     price: 53.5,
     image: "img-2",
     onSale: false,
-    categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    categoryId: "10",
   },
   {
     id: "3",
@@ -28,7 +28,7 @@ const products = [
     price: 1.33,
     image: "img-3",
     onSale: true,
-    categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    categoryId: "10",
   },
   {
     id: "4",
@@ -38,7 +38,7 @@ const products = [
     price: 332,
     image: "img-4",
     onSale: false,
-    categoryId: "34115aac-0ff5-4859-8f43-10e8db23602b",
+    categoryId: "11",
   },
   {
     id: "5",
@@ -48,7 +48,7 @@ const products = [
     price: 23.11,
     image: "img-5",
     onSale: true,
-    categoryId: "34115aac-0ff5-4859-8f43-10e8db23602b",
+    categoryId: "11",
   },
   {
     id: "6",
@@ -58,7 +58,7 @@ const products = [
     price: 59.99,
     image: "img-6",
     onSale: true,
-    categoryId: "d914aec0-25b2-4103-9ed8-225d39018d1d",
+    categoryId: "12",
   },
   {
     id: "7",
@@ -68,7 +68,7 @@ const products = [
     price: 427.44,
     image: "img-7",
     onSale: false,
-    categoryId: "d914aec0-25b2-4103-9ed8-225d39018d1d",
+    categoryId: "12",
   },
   {
     id: "8",
@@ -78,7 +78,7 @@ const products = [
     price: 77.0,
     image: "img-8",
     onSale: true,
-    categoryId: "d914aec0-25b2-4103-9ed8-225d39018d1d",
+    categoryId: "12",
   },
   {
     id: "9",
@@ -88,7 +88,7 @@ const products = [
     price: 93.44,
     image: "img-9",
     onSale: false,
-    categoryId: "d914aec0-25b2-4103-9ed8-225d39018d1d",
+    categoryId: "12",
   },
 ];
 
@@ -114,7 +114,7 @@ const reviews = [
     title: "This is bad",
     comment: "when i bought this it broke the stove",
     rating: 1,
-    productId: "53a0724c-a416-4cac-ae45-bfaedce1f147",
+    productId: "1",
   },
   {
     id: "14",
@@ -122,7 +122,7 @@ const reviews = [
     title: "This is good",
     comment: "one of the most decent pots",
     rating: 3,
-    productId: "53a0724c-a416-4cac-ae45-bfaedce1f147",
+    productId: "1",
   },
   {
     id: "15",
@@ -130,7 +130,7 @@ const reviews = [
     title: "is okay",
     comment: "yes it is decent i guess",
     rating: 2,
-    productId: "53a0724c-a416-4cac-ae45-bfaedce1f147",
+    productId: "1",
   },
   {
     id: "16",
@@ -138,7 +138,7 @@ const reviews = [
     title: "terrible",
     comment: "why is it so expensive",
     rating: 1,
-    productId: "53a0724c-a416-4cac-ae45-bfaedce1f147",
+    productId: "1",
   },
   {
     id: "17",
@@ -146,7 +146,7 @@ const reviews = [
     title: "best thing ever",
     comment: "really good bowl",
     rating: 5,
-    productId: "c2af9adc-d0b8-4d44-871f-cef66f86f7f6",
+    productId: "2",
   },
   {
     id: "18",
@@ -154,7 +154,7 @@ const reviews = [
     title: "SUPER HAPPY",
     comment: "this is amazing, only 4 stars tho... :)",
     rating: 4,
-    productId: "c2af9adc-d0b8-4d44-871f-cef66f86f7f6",
+    productId: "2",
   },
   {
     id: "19",
@@ -162,7 +162,7 @@ const reviews = [
     title: "life changing",
     comment: "writing mock data is so boring...",
     rating: 5,
-    productId: "c2af9adc-d0b8-4d44-871f-cef66f86f7f6",
+    productId: "2",
   },
   {
     id: "20",
@@ -170,7 +170,7 @@ const reviews = [
     title: "This is coooooool!",
     comment: "I would totally recommend",
     rating: 5,
-    productId: "c2af9adc-d0b8-4d44-871f-cef66f86f7f6",
+    productId: "2",
   },
   {
     id: "21",
@@ -178,7 +178,7 @@ const reviews = [
     title: "idc",
     comment: "It's a spoon...",
     rating: 3,
-    productId: "2c931e7e-510f-49e5-aed6-d6b44087e5a1",
+    productId: "3",
   },
   {
     id: "22",
@@ -187,7 +187,7 @@ const reviews = [
     comment:
       "Not good at all!! used it once and got caught 2 days later. now im doing life without parole",
     rating: 1,
-    productId: "404daf2a-9b97-4b99-b9af-614d07f818d7",
+    productId: "4",
   },
   {
     id: "23",
@@ -195,7 +195,7 @@ const reviews = [
     title: "great",
     comment: "Great for planting",
     rating: 5,
-    productId: "404daf2a-9b97-4b99-b9af-614d07f818d7",
+    productId: "4",
   },
   {
     id: "24",
@@ -203,7 +203,7 @@ const reviews = [
     title: "Made well",
     comment: "Strong an firm",
     rating: 5,
-    productId: "404daf2a-9b97-4b99-b9af-614d07f818d7",
+    productId: "4",
   },
   {
     id: "25",
@@ -211,7 +211,7 @@ const reviews = [
     title: "Plants grew well",
     comment: "Oxygen and nitrogen rich!",
     rating: 3,
-    productId: "6379c436-9fad-4b3f-a427-2d7241f5c1b1",
+    productId: "5",
   },
   {
     id: "26",
@@ -219,7 +219,7 @@ const reviews = [
     title: "I made the Nba",
     comment: "My name is LeBron James",
     rating: 5,
-    productId: "f01bcdec-6783-464e-8f9e-8416830f7569",
+    productId: "6",
   },
   {
     id: "27",
@@ -227,7 +227,7 @@ const reviews = [
     title: "I did not make the NBA",
     comment: "My name is Laith Harb",
     rating: 5,
-    productId: "f01bcdec-6783-464e-8f9e-8416830f7569",
+    productId: "6",
   },
   {
     id: "28",
@@ -235,7 +235,7 @@ const reviews = [
     title: "I love ball",
     comment: "I play basketball with this basketball",
     rating: 5,
-    productId: "f01bcdec-6783-464e-8f9e-8416830f7569",
+    productId: "6",
   },
   {
     id: "29",
@@ -243,7 +243,7 @@ const reviews = [
     title: "Gooooolf",
     comment: "I need golfing tips",
     rating: 5,
-    productId: "a4824a31-5c83-42af-8c1b-6e2461aae1ef",
+    productId: "7",
   },
   {
     id: "30",
@@ -251,7 +251,7 @@ const reviews = [
     title: "meh",
     comment: "I don't like it",
     rating: 3,
-    productId: "a4824a31-5c83-42af-8c1b-6e2461aae1ef",
+    productId: "7",
   },
   {
     id: "31",
@@ -259,7 +259,7 @@ const reviews = [
     title: "baseball...?",
     comment: "I thought this was for football",
     rating: 5,
-    productId: "b553085a-a7e0-4c9b-8a12-f971919c3683",
+    productId: "8",
   },
   {
     id: "32",
@@ -267,7 +267,7 @@ const reviews = [
     title: "soccer or football",
     comment: "IT'S CALLED FOOTBALL",
     rating: 2,
-    productId: "47bf3941-9c8b-42c0-9c72-7f3985492a5b",
+    productId: "9",
   },
   {
     id: "33",
@@ -275,7 +275,7 @@ const reviews = [
     title: "too small",
     comment: "ball is too same",
     rating: 4,
-    productId: "47bf3941-9c8b-42c0-9c72-7f3985492a5b",
+    productId: "9",
   },
   {
     id: "34",
@@ -283,12 +283,8 @@ const reviews = [
     title: "got flat",
     comment: "The ball got as flat as the earth. I want it round!!!!",
     rating: 2,
-    productId: "47bf3941-9c8b-42c0-9c72-7f3985492a5b",
+    productId: "9",
   },
 ];
 
-export {
-  products,
-  categories,
-  reviews,
-};
+export { products, categories, reviews };

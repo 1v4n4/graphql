@@ -22,11 +22,13 @@ const typeDefs = gql`
     image: String!
     price: Float!
     onSale: Boolean!
+    category: Category!
   }
 
   type Category {
     id: ID!
     name: String!
+    products: [Product!]!
   }`;
 
 const resolvers = {
@@ -34,12 +36,23 @@ const resolvers = {
     hello: () => ['Hello', 'world!'],
     products: () => products,
     product: (parent, args, context) => {
-      console.log(parent, args, context);
       return products.find(product => product.id === args.id);
     },
     categories: () => categories,
     category: (parent, args, context) => {
       return categories.find(category => category.id == args.id);
+    }
+  },
+  Category: {
+    products: (parent, args, context) => {
+      console.log(parent, args, context);
+      return products.filter(product => product.categoryId == parent.id);
+    }
+  },
+  Product: {
+    category: (parent, args, context) => {
+      console.log(parent);
+      return categories.find(category => category.id === parent.categoryId);
     }
   }
 };
