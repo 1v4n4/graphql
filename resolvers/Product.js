@@ -3,7 +3,6 @@ const Product = {
     return categories.find(category => category.id === categoryId);
   },
   reviews: ({ id }, args, { reviews }) => {
-    console.log(reviews, id);
     return reviews.filter(review => review.productId === id);
   }
 };

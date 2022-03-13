@@ -37,6 +37,7 @@ const typeDefs = gql`
 
   input productsFilter {
     onSale: Boolean
+    avgRating: Int
   }`;
 
   export default typeDefs;
