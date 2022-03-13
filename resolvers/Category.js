@@ -1,6 +1,6 @@
 const Category = {
-  products: ({categoryId}, args, {products}) => {
-    return products.filter(product => categoryId == parent.id);
+  products: ({id}, args, {products}) => {
+    return products.filter(product => product.categoryId === id);
   }
 }
 
