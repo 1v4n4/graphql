@@ -36,6 +36,17 @@ const Mutation = {
     }
     reviews.push(newReview);
     return newReview;
+  },
+  deleteCategory: (parent, { id }, { categories, products }) => {
+    const categoryIndex = categories.findIndex(category => category.id === id);
+    if (categoryIndex === -1) {
+      return false;
+    }
+    categories.splice(categoryIndex, 1);
+    products = products.map(product => {
+      return product.id === id ? { ...product, categoryId: null } : product;
+    });
+    return true;
   }
 };
 
