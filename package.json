@@ -1,0 +1,19 @@
+{
+  "name": "graphgl-api",
+  "version": "1.0.0",
+  "description": "A graphql API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.16.0",
+    "graphql": "^15.8.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
