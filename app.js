@@ -1,35 +1,30 @@
-import express from 'express';
+import {ApolloServer, gql} from 'apollo-server';
 import bodyParser from 'body-parser';
-import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 
-const app = express(); // create an instance of express
+const typeDefs = gql`
+  type Query {
+    hello: String
+    number1: Int
+  }`;
 
-app.use(bodyParser.json()); // use bodyParser to parse json
-
-app.use("/graphql", graphqlHTTP({
-  schema: buildSchema(`
-  type rootQuery {
-    events: [String!]!
+const resolvers = {
+  Query: {
+    hello: () => 'Hello world!',
+    number1: () => 1
   }
-  type rootMutation {
-    createEvent(name: String): String
+};
+const server = new ApolloServer(
+  {
+    typeDefs,
+    resolvers,
   }
-  schema {
-    query: rootQuery
-    mutation: rootMutation
-    }
-    `),
-  rootValue: {
-    events: () => {
-      return ['event1', 'event2'];
-    },
-    createEvent: args => {
-      const eventName = args.name;
-      return eventName;
-    }
-  },
-  graphiql: true
-}));
+);
 
-app.listen(3000);
+
+
+
+server.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
+}
+);

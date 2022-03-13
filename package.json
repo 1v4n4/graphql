@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.2",
-    "express": "^4.17.3",
-    "express-graphql": "^0.12.0",
+    "apollo-server": "^2.16.0",
     "graphql": "^15.8.0"
   },
   "devDependencies": {
