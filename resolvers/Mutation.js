@@ -47,6 +47,18 @@ const Mutation = {
       return product.id === id ? { ...product, categoryId: null } : product;
     });
     return true;
+  },
+  deleteProduct: (parent, { id }, { products, reviews }) => {
+    console.log(products.length);
+    console.log(reviews.length);
+    if (!products.find(product => product.id === id)) {
+      return false;
+    }
+    products = products.filter(product => product.id !== id);
+    reviews = reviews.filter(review => review.productId !== id);
+    console.log(products.length);
+    console.log(reviews.length);
+    return true;
   }
 };
 

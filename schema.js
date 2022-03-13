@@ -7,6 +7,7 @@ const typeDefs = gql`
     product(id: ID!): Product
     categories: [Category!]!
     category(id: ID!): Category
+    reviews: [Review!]!
   }
 
   type Mutation {
@@ -14,6 +15,7 @@ const typeDefs = gql`
     addProduct(input: addProductInput): Product!
     addReview(input: addReviewInput): Review!
     deleteCategory(id: ID!): Boolean!
+    deleteProduct(id: ID!): Boolean!
   }
 
   type Product {
@@ -40,6 +42,7 @@ const typeDefs = gql`
     comment: String!
     rating: Int!
     date: String!
+    productId: ID!
   }
 
   input productsFilter {

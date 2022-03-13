@@ -31,7 +31,8 @@ const Query = {
   categories: (parent, args, context) => context.categories,
   category: (parent, args, context) => {
     return context.categories.find(category => category.id == args.id);
-  }
+  },
+  reviews: (parent, args, context) => context.reviews
 }
 
 export default Query;
