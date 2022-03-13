@@ -59,6 +59,28 @@ const Mutation = {
     console.log(products.length);
     console.log(reviews.length);
     return true;
+  },
+  updateCategory: (parent, { id, input }, { categories }) => {
+    const categoryIndex = categories.findIndex(category => category.id === id);
+    if (categoryIndex === -1) {
+      return null;
+        }
+    categories[categoryIndex] = {
+      ...categories[categoryIndex],
+      ...input
+    };
+    return categories[categoryIndex];
+  },
+  updateProduct: (parent, { id, input }, { products }) => {
+    const productIndex = products.findIndex(product => product.id === id);
+    if (productIndex === -1) {
+      return null;
+    }
+    products[productIndex] = {
+      ...products[productIndex],
+      ...input
+    };
+    return products[productIndex];
   }
 };
 

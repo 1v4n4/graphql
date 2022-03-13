@@ -1,5 +1,7 @@
 import { gql } from "apollo-server";
 
+// if id not found line 21 throws an error with or without bang
+
 const typeDefs = gql`
   type Query {
     hello: [String!]!
@@ -16,6 +18,8 @@ const typeDefs = gql`
     addReview(input: addReviewInput): Review!
     deleteCategory(id: ID!): Boolean!
     deleteProduct(id: ID!): Boolean!
+    updateCategory(id: ID!, input: updateCategoryInput): Category!
+    updateProduct(id: ID!, input: updateProductInput): Product!
   }
 
   type Product {
@@ -61,7 +65,7 @@ const typeDefs = gql`
     image: String!
     price: Float!
     onSale: Boolean!
-    categoryId: ID!
+    categoryId: ID
   }
 
   input addReviewInput {
@@ -71,6 +75,18 @@ const typeDefs = gql`
     rating: Int!
   }
 
+  input updateCategoryInput {
+    name: String!
+  }
+  input updateProductInput {
+    name: String
+    description: String
+    quantity: Int
+    image: String
+    price: Float
+    onSale: Boolean
+    categoryId: ID
+  }
   `;
 
   export default typeDefs;
