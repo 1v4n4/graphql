@@ -1,8 +1,6 @@
-import { products } from '../data.js';
-
 const Category = {
-  products: (parent, args, context) => {
-    return products.filter(product => product.categoryId == parent.id);
+  products: ({categoryId}, args, {products}) => {
+    return products.filter(product => categoryId == parent.id);
   }
 }
 

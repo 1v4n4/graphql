@@ -1,14 +1,13 @@
-import { products, categories } from '../data.js';
+// without deconstructing objects
 
 const Query = {
-  hello: () => ['Hello', 'world!'],
-  products: () => products,
+  products: (parent, args, context) => context.products,
   product: (parent, args, context) => {
-    return products.find(product => product.id === args.id);
+    return context.products.find(product => product.id === args.id);
   },
-  categories: () => categories,
+  categories: (parent, args, context) => context.categories,
   category: (parent, args, context) => {
-    return categories.find(category => category.id == args.id);
+    return context.categories.find(category => category.id == args.id);
   }
 }
 
