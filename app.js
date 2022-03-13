@@ -1,16 +1,9 @@
 import {ApolloServer, gql} from 'apollo-server';
 import bodyParser from 'body-parser';
 import { buildSchema } from 'graphql';
+import { products } from './data.js';
 
-// const resolvers = {
-//   Query: {
-//     name: () => 'My first product',
-//     description: () => 'This is my first product',
-//     quantity: () => 10,
-//     price: () => 10.99,
-//     onSale: () => true
-//   }
-// };
+
 
 const typeDefs = gql`
   type Query {
@@ -22,6 +15,7 @@ const typeDefs = gql`
     name: String!
     description: String!
     quantity: Int!
+    image: String!
     price: Float!
     onSale: Boolean!
   }`;
@@ -29,13 +23,7 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: () => ['Hello', 'world!'],
-    products: () => [{
-      name: "product",
-      description: "product description",
-      quantity: 1,
-      price: 9.99,
-      onSale: true
-    }]
+    products: () => products
   }
 };
 
